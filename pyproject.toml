@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "heroku-rest-api"
+name = "cookbook-api"
 version = "0.1.0"
 description = ""
 authors = ["Tomasz Wrona <tomasz@wrona.me>"]
