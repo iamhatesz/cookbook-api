@@ -17,16 +17,18 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views as authtoken_views
 
-from cookbook_api.api.views import UserViewSet, RecipeViewSet
+from cookbook_api.api.views import RecipeViewSet, UserRecipeViewSet
 
 router = DefaultRouter()
 router.register(r"recipes", RecipeViewSet)
-router.register(r"users", UserViewSet)
+router.register(r"user/recipes", UserRecipeViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path('api-token-auth/', authtoken_views.obtain_auth_token),
     path("admin/", admin.site.urls),
 ]
 
