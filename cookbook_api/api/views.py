@@ -13,7 +13,7 @@ class RecipeViewSet(ModelViewSet):
 
 
 class UserRecipeViewSet(ModelViewSet):
-    queryset = Recipe.objects.filter()
+    queryset = Recipe.objects
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated]
     authentication_classes = [TokenAuthentication]
