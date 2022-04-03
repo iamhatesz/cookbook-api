@@ -1,18 +1,18 @@
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet
 
 from cookbook_api.api.models import Recipe
 from cookbook_api.api.serializers import RecipeSerializer
 
 
-class RecipeViewSet(ModelViewSet):
+class RecipeViewSet(ReadOnlyModelViewSet):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = []
 
 
-class UserRecipeViewSet(ModelViewSet):
+class UserRecipeViewSet(ReadOnlyModelViewSet):
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated]
     authentication_classes = [TokenAuthentication]
