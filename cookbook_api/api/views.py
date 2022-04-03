@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
-from heroku_rest_api.api.serializers import UserSerializer, GroupSerializer
+from cookbook_api.api.serializers import UserSerializer, GroupSerializer
 
 
 class UserViewSet(ModelViewSet):

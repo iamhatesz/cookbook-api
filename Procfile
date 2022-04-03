@@ -1,2 +1,2 @@
-web: gunicorn heroku_rest_api.wsgi
+web: gunicorn cookbook_api.wsgi
 release: python manage.py migrate

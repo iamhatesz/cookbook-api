@@ -1,4 +1,4 @@
-"""heroku_rest_api URL Configuration
+"""cookbook_api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -18,7 +18,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from heroku_rest_api.api.views import UserViewSet, GroupViewSet
+from cookbook_api.api.views import UserViewSet, GroupViewSet
 
 router = DefaultRouter()
 router.register(r"users", UserViewSet)
