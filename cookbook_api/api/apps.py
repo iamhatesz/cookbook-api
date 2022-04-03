@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class ApiConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "heroku_rest_api.api"
+    name = "cookbook_api.api"
