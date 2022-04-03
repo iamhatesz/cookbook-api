@@ -22,8 +22,8 @@ from rest_framework.authtoken import views as authtoken_views
 from cookbook_api.api.views import RecipeViewSet, UserRecipeViewSet
 
 router = DefaultRouter()
-router.register(r"recipes", RecipeViewSet)
-router.register(r"user/recipes", UserRecipeViewSet)
+router.register(r"recipes", RecipeViewSet, basename="recipes")
+router.register(r"user/recipes", UserRecipeViewSet, basename="user_recipes")
 
 urlpatterns = [
     path("", include(router.urls)),
