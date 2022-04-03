@@ -18,11 +18,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from cookbook_api.api.views import UserViewSet, GroupViewSet
+from cookbook_api.api.views import UserViewSet, RecipeViewSet
 
 router = DefaultRouter()
+router.register(r"recipes", RecipeViewSet)
 router.register(r"users", UserViewSet)
-router.register(r"groups", GroupViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),

@@ -1,6 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
-from cookbook_api.api.models import Item
+from cookbook_api.api.models import Recipe, Tag
 
-admin.site.register(Item)
+
+@admin.register(Tag)
+class AdminTag(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Recipe)
+class AdminRecipe(admin.ModelAdmin):
+    pass
