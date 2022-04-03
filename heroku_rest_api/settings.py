@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "rest_framework",
+    "heroku_rest_api.api",
 ]
 
 MIDDLEWARE = [
